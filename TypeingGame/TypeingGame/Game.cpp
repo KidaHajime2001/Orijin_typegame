@@ -7,18 +7,18 @@ Game::Game()
 
 Game::~Game()
 {
+	delete type;
 }
 
 void Game::Draw()
 {
 	clsDx();
 	printfDx("GAME");
-	type->Update();
+	type->Draw();
 }
 
 SceneBase* Game::Update()
 {
-
 	
 	//‘JˆÚ
 	if (CheckHitKey(KEY_INPUT_F1))

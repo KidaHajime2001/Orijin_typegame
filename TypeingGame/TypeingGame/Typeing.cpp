@@ -12,74 +12,70 @@ Typeing::~Typeing()
 {
 }
 
-string Typeing::CreateCharROMA(string japaneseHIRAGANA)
-{
-	int i,j;
-
-	return japaneseHIRAGANA;
-}
 
 void Typeing::Update()
 {
-	printfDx(CreateCharROMA("Ç±ÇÒÇ…ÇøÇÌ").c_str());
+
+}
+
+void Typeing::Draw()
+{
+	string num = { "Ç±ÇÒÇ…ÇøÇÌ" };
+	string romaji= CreateRomaJI(num);
+
+	printfDx(romaji.c_str());
+
+
+
+	/*string num = " ";
+	vector<string> num2;
+	for (int i = 0; i < 200; i++)
+	{
+		
+		num2.clear();
+		if (StringConvTable[i].BaseString!=nullptr)
+		{
+			num = StringConvTable[i].BaseString;
+			printfDx(num.c_str());
+			printfDx(":");
+			num = StringConvTable[i].InputChars[0];
+			printfDx(num.c_str());
+		}
+		
+		
+		if (i%10==0)
+		{
+
+			printfDx("\n");
+		}
+		
+	}*/
+}
+
+string Typeing::CreateRomaJI(const string& num)
+{
+	string NUMX="a";
+	num[0];
+	printfDx("\n");
+	printfDx(num.c_str());
+	printfDx("\n");
+	printfDx(NUMX.c_str());
+	printfDx("\n");
+	//for (int j = 0; j < num.size(); j++)
+	//{
+	//	
+
+	//	for (int i = 0; i < 200; i++)
+	//	{
+	//		if (num[j]==StringConvTable->BaseString[i])
+	//		{
+	//			SUM +=StringConvTable->BaseString[i];
+	//		}
+	//	}
+	//}
+	
+	return num;
 }
 
 
 
-
-
-/*StringConvTable;*/
-	//string moji_J[160] =
-	//{
-	//	"Ç†",   "Ç¢",    "Ç§",    "Ç¶",    "Ç®",
-	//	"Ç©",   "Ç´",    "Ç≠",	  "ÇØ",    "Ç±",
-	//	"Ç≥",   "Çµ",    "Ç∑",	  "Çπ",    "Çª",
-	//	"ÇΩ",   "Çø",    "Ç¬",	  "Çƒ",	   "Ç∆",
-	//	"Ç»",   "Ç…",    "Ç ",	  "ÇÀ",	   "ÇÃ",
-	//	"ÇÕ",   "Ç–",	 "Ç”",	  "Ç÷",	   "ÇŸ",
-	//	"Ç‹",   "Ç›",	 "Çﬁ",	  "Çﬂ",	   "Ç‡",
-	//	//45
-
-
-	//	"Ç‚",   "Ç‰",	 "ÇÊ",			  
-	//	"ÇÁ",   "ÇË",	 "ÇÈ",	  "ÇÍ",	   "ÇÎ",
-	//	"ÇÌ",   "Ç",	 "ÇÒ",			  
-	//	//11
-
-	//	"Ç™",   "Ç¨",	 "ÇÆ",	  "Ç∞",	   "Ç≤",
-	//	"Ç¥",   "Ç∂",	 "Ç∏",	  "Ç∫",	   "Çº",
-	//	"Çæ",   "Ç¿",	 "Ç√",	  "Ç≈",	   "Ç«",
-	//	"ÇŒ",   "Ç—",	 "Ç‘",	  "Ç◊",	   "Ç⁄",
-	//	"Çœ",   "Ç“",	 "Ç’",	  "Çÿ",	   "Ç€",
-	//	//25
-
-	//	"Ç´Ç·",   "Ç´Ç„",	 "Ç´ÇÂ",
-	//	"Ç¨Ç·",   "Ç¨Ç„",	 "Ç¨ÇÂ",
-	//	"ÇµÇ·",   "ÇµÇ„",	 "ÇµÇÂ",	 "ÇµÇ•",
-	//	"Ç∂Ç·",   "Ç∂Ç„",	 "Ç∂ÇÂ",	 "Ç∂Ç•",
-	//	"ÇøÇ·",   "ÇøÇ„",	 "ÇøÇÂ",	 "ÇøÇ•",
-	//	//18
-
-	//	"Ç¿Ç·",   "Ç¿Ç„",	 "Ç¿ÇÂ",
-	//	"Ç…Ç·",   "Ç…Ç„",	 "Ç…ÇÂ",
-	//	"Ç–Ç·",   "Ç–Ç„",	 "Ç–ÇÂ",
-	//	"Ç—Ç·",   "Ç—Ç„",	 "Ç—ÇÂ",
-	//	"Ç“Ç·",   "Ç“Ç„",	 "Ç“ÇÂ",
-	//	"Ç”Çü",   "Ç”Ç°",	 "Ç”Ç•",	"Ç”Çß",
-	//	"Ç”Ç·",   "Ç”Ç„",	 "Ç”ÇÂ",
-	//	"Ç›Ç·",   "Ç›Ç„",	 "Ç›ÇÂ",
-	//	"ÇËÇ·",   "ÇËÇ„",	 "ÇËÇÂ",
-
-	//	"Ç¡"
-	//	//29
-
-	//	"Çü",   "Ç°",	 "Ç£",	  "Ç•",	   "Çß",
-	//	"Ç·",   "Ç„",	 "ÇÂ",
-	//	"ÇÏ",
-	//	"Ç§Çü",   "Ç§Ç°",	 "Ç§Ç•",	 "Ç§Çß",
-	//	"ÉîÇü",   "ÉîÇ°",	 "Éî",	  "ÉîÇ•",	   "ÉîÇß",
-	//	"ÇƒÇ°",   "Ç≈Ç°",	 "Ç≈Ç„",
-	//	"Å[",
-	//	//32
-	//};
-	//
