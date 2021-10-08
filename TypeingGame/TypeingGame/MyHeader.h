@@ -25,3 +25,6 @@ using namespace std;
 
 //effect
 #include"Myeffect.h"
+
+//object
+#include"Typeing.h"

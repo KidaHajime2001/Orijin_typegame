@@ -16,7 +16,10 @@ void Game::Draw()
 
 SceneBase* Game::Update()
 {
-	if (CheckHitKey(KEY_INPUT_SPACE))
+
+
+	//‘JˆÚ
+	if (CheckHitKey(KEY_INPUT_F1))
 	{
 		return new Title;
 	}

@@ -43,11 +43,17 @@
     <Filter Include="ヘッダー ファイル\Scene\Title\TextCreate">
       <UniqueIdentifier>{9ec47729-6a5d-4d5b-bd4c-c3a588fde978}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Object\type">
+      <UniqueIdentifier>{1ae7b837-c093-4109-96e1-e705834bbf0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Object\type">
+      <UniqueIdentifier>{95eb9c61-e9a3-41bb-bc6e-239a49f7c3bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\effect">
+      <UniqueIdentifier>{d738007b-e3f6-4f40-9a3d-ced6e277abd1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="SceneBase.cpp">
       <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
@@ -63,8 +69,14 @@
     <ClCompile Include="Button.cpp">
       <Filter>ソース ファイル\Object\UI</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Typeing.cpp">
+      <Filter>ソース ファイル\Object\type</Filter>
+    </ClCompile>
     <ClCompile Include="Myeffect.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\effect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -83,11 +95,14 @@
     <ClInclude Include="Mouse.h">
       <Filter>ヘッダー ファイル\Object\UI</Filter>
     </ClInclude>
-    <ClInclude Include="Myeffect.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Title.h">
       <Filter>ヘッダー ファイル\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Typeing.h">
+      <Filter>ヘッダー ファイル\Object\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Myeffect.h">
+      <Filter>ヘッダー ファイル\effect</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

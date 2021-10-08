@@ -11,6 +11,7 @@ Mouse::Mouse()
 	,PushActionFlag(false)
 {
 	ef = new MyEffect;
+	ef->EF_Init();
 	ef->Set_Expansion(10.0f);
 	ef->LoadEF("data/efk/click.efkefc");
 	WheelSize = 0;
@@ -31,6 +32,7 @@ void Mouse::Update()
 
 	if (mouse & MOUSE_INPUT_LEFT) { //マウスの左ボタンが押されていたら
 		nowPush = true;
+
 	}
 	else
 	{
@@ -56,7 +58,7 @@ void Mouse::Update()
 		WheelSize -= 0.1;
 	}
 	ef->set_EF_Pos((float)MouseArrowX,(float)MouseArrowY);
-	ef->EF_Update();
+	
 }
 
 int Mouse::GetMousePosX()
@@ -82,8 +84,11 @@ void Mouse::DrawMouse()
 	printfDx("\nmouseX:%d\n",MouseArrowX);
 	printfDx("mouseY%d\n", MouseArrowY);
 	printfDx("mouseW%lf\n", WheelSize);
+
 	if (PushActionFlag)
 	{
+
 		ef->PlayEF();
 	}
+	ef->EF_Update();
 }
