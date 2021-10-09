@@ -19,7 +19,7 @@ void Game::Draw()
 
 SceneBase* Game::Update()
 {
-	
+	type->Update();
 	//‘JˆÚ
 	if (CheckHitKey(KEY_INPUT_F1))
 	{

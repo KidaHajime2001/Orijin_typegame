@@ -78,6 +78,9 @@
     <ClCompile Include="Myeffect.cpp">
       <Filter>ソース ファイル\effect</Filter>
     </ClCompile>
+    <ClCompile Include="key.cpp">
+      <Filter>ソース ファイル\Object\type</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SceneBase.h">
@@ -103,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="Myeffect.h">
       <Filter>ヘッダー ファイル\effect</Filter>
+    </ClInclude>
+    <ClInclude Include="key.h">
+      <Filter>ソース ファイル\Object\type</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -22,7 +22,7 @@ using namespace std;
 //UI
 #include"Button.h"
 #include"Mouse.h"
-
+#include"key.h"
 //effect
 #include"Myeffect.h"
 

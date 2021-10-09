@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="key.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Myeffect.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="Title.h" />
     <ClInclude Include="Typeing.h" />
+    <ClInclude Include="key.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

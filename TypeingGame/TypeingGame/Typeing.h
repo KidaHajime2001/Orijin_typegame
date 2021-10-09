@@ -7,7 +7,8 @@ public:
 	~Typeing();
 	void Update();
 	void Draw();
-	string CreateRomaJI(const string& num);
+	string CreateRomaJI(string num);
+	int ConvertString(const char* BaseString);
 private:
 	struct CONVDATA
 	{
@@ -17,7 +18,16 @@ private:
 		// 入力するアルファベットの文字列
 		const char* InputChars[10];
 	};
-	
+	struct TYPEINGDATA
+	{
+		// ローマ仮名に変換する前の文字列
+		string BaseString;
+
+		// 入力するアルファベットの文字列
+		vector<string> InputChars;
+		 
+	};
+	TYPEINGDATA type_My_Data[200];
 	CONVDATA StringConvTable[200]=
 	{
 		{  "あ",           { "a"   } },        {"い",  {"i"       }},       {"う",  {"u"      }},       {"え",   {"e"  }},   {"お",   {"o"  } },
@@ -60,4 +70,26 @@ private:
 
 		{NULL,{NULL}},
 	};
+
+	struct TYPINGDATA
+	{
+		// 入力すべき文字列を変換テーブルの対応するインデックスに置き換えたもの
+		int TableIndex[512];
+
+		// インデックスの数
+		int TableIndexNum;
+
+		// 入力が完了したインデックスの数
+		int CompleteIndexNum;
+
+		// 現在入力中の文字列
+		char TypingString[20];
+
+		// 入力が完了した文字列
+		char CompletionString[512];
+	};
+	TYPINGDATA TypingData;
+	class My_Key* mk;
+	string InPut="aaaaaaaa";
+	char Name[31];
 };
