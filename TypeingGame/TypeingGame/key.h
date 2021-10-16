@@ -8,4 +8,5 @@ public:
 	char My_putKeyCheck();
 private:
 	int i=0;
+	int ALL;
 };

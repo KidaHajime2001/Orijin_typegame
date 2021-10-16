@@ -8,7 +8,8 @@ public:
 	void Update();
 	void Draw();
 	string CreateRomaJI(string num);
-	int ConvertString(const char* BaseString);
+	bool CheckInputRoma(char NowType,int Num);
+	string ConverterROMA();
 private:
 	struct CONVDATA
 	{
@@ -18,7 +19,7 @@ private:
 		// 入力するアルファベットの文字列
 		const char* InputChars[10];
 	};
-	struct TYPEINGDATA
+	struct STRINGDATA
 	{
 		// ローマ仮名に変換する前の文字列
 		string BaseString;
@@ -27,7 +28,7 @@ private:
 		vector<string> InputChars;
 		 
 	};
-	TYPEINGDATA type_My_Data[200];
+	STRINGDATA type_My_Data[200];
 	CONVDATA StringConvTable[200]=
 	{
 		{  "あ",           { "a"   } },        {"い",  {"i"       }},       {"う",  {"u"      }},       {"え",   {"e"  }},   {"お",   {"o"  } },
@@ -57,7 +58,7 @@ private:
 		{"ひゃ",{"hya"}},{"ひゅ",{"hyu"}},{"ひょ",{"hyo"}},
 		{"びゃ",{"bya"}},{"びゅ",{"byu"}},{"びょ",{"byo"}},
 		{"ぴゃ",{"pya"}},{"ぴゅ",{"pyu"}},{"ぴょ",{"pyo"}},
-		{"ふぁ",{"fa"}},{"ふぃ",{"fi"}},{"ふぇ",{"fu"}},{"ふぉ",{"fo"}},
+		{"ふぁ",{"fa"}},{"ふぃ",{"fi"}},{"ふぇ",{"fe"}},{"ふぉ",{"fo"}},
 		{"みゃ",{"mya"}},{"みゅ",{"myu"}},{"みょ",{"myo"}},
 		{"りゃ",{"rya"}},{"りゅ",{"ryu"}},{"りょ",{"ryo"}},
 
@@ -77,19 +78,31 @@ private:
 		int TableIndex[512];
 
 		// インデックスの数
-		int TableIndexNum;
+		int TableIndexNum=0;
 
 		// 入力が完了したインデックスの数
-		int CompleteIndexNum;
+		int CompleteIndexNum=0;
 
 		// 現在入力中の文字列
 		char TypingString[20];
 
 		// 入力が完了した文字列
 		char CompletionString[512];
+		//今の文字数
+		int nownum=0;
+		//
+		int TableIndexPattern[512];
 	};
 	TYPINGDATA TypingData;
 	class My_Key* mk;
-	string InPut="aaaaaaaa";
+	string InPut;
 	char Name[31];
+	int charstate = 0;
+	string TMP;
+	struct TMPROMA
+	{
+		string Roma;
+		int chooseNum=0;
+	};
+	TMPROMA myROMAJI;
 };
